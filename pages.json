@@ -1,0 +1,16 @@
+{
+  "pages": [
+    {
+      "name": "Accounting",
+      "url": "https://qonto.com/fr/accounting"
+    },
+    {
+      "name": "Pricing",
+      "url": "https://qonto.com/fr/pricing"
+    },
+    {
+      "name": "Team",
+      "url": "https://qonto.com/fr/team"
+    }
+  ]
+}
