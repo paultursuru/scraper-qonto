@@ -1,3 +1,7 @@
 ### Scraping Qonto
 run `ruby app.rb` to start scraping pages contained in pages.json
-for each page, Scraper will instantiate a Page and it's many Sections with their many Items
+
+a new instance of Scraper is created for each page/url
+Scraper checks if page is Prismic or not, then starts parsing html with Nokogiri.
+
+Each Page has many Sections with many Items
