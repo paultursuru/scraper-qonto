@@ -1,9 +1,9 @@
 class Section
-  attr_reader :page, :position, :classes, :items
+  attr_reader :page, :id, :classes, :items
 
   def initialize(attr = {})
     @page           = attr.dig(:page)
-    @position       = attr.dig(:position)
+    @id             = attr.dig(:id)
     @classes        = attr.dig(:classes)
     @items          = []
     @page.sections  << self

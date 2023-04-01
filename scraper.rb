@@ -17,7 +17,7 @@ class Scraper
     html_doc.search("section").each do |element|
       next unless is_a_section?(element)
 
-      section = Section.new(page: page, position: element.attributes["id"].value, classes: element.attributes["class"].value)
+      section = Section.new(page: page, id: element.attributes["id"]&.value, classes: element.attributes["class"]&.value)
 
       element.traverse do |node|
         Item.new( section: section,

@@ -16,3 +16,11 @@ def puts_item(item)
     puts "<#{item.tag} id='#{item.id}' class='#{item.classes}'>#{item.content}</#{item.tag}>"
   end
 end
+
+def puts_section(section)
+  puts "--------------------"
+  puts "Section #{section.id}"
+  section.items.each do |item|
+    puts_item(item)
+  end
+end
