@@ -8,7 +8,7 @@ class Scraper
   def scrape
     html_file = URI.open(@url).read
     html_doc = Nokogiri::HTML.parse(html_file)
-    html_doc.search(".prismic").any? ? parse(html_doc) : nil
+    html_doc.search(".prismic").any? ? parse(html_doc) : nil # Check if it's a prismic page
   end
 
   def parse(html_doc)
