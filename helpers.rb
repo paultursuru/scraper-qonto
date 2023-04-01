@@ -24,3 +24,30 @@ def puts_section(section)
     puts_item(item)
   end
 end
+
+def generate_hash_with(pages_array)
+  {
+    "pages" => pages_array.map do |page|
+      {
+        "url" => page.url,
+        "name" => page.name,
+        "sections" => page.sections.map do |section|
+          {
+            "id" => section.id,
+            "classes" => section.classes,
+            "items" => section.items.map do |item|
+              {
+                "tag" => item.tag,
+                "content" => item.content,
+                "id" => item.id,
+                "classes" => item.classes,
+                "href" => item.href,
+                "src" => item.src
+              }
+            end
+          }
+        end
+      }
+    end
+  }
+end
